@@ -1,0 +1,24 @@
+/* ============================================================
+   ANIMAÇÕES - importado no style.css ou no HTML
+   Para usar: adicione a classe "animar" no elemento HTML.
+   O JS em script.js adiciona "visivel" quando o elemento
+   entra na tela, ativando a animação.
+   ============================================================ */
+
+.animar {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.animar.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Atraso escalonado para grids (opcional) */
+.animar:nth-child(2) { transition-delay: 0.08s; }
+.animar:nth-child(3) { transition-delay: 0.16s; }
+.animar:nth-child(4) { transition-delay: 0.24s; }
+.animar:nth-child(5) { transition-delay: 0.32s; }
+.animar:nth-child(6) { transition-delay: 0.40s; }

@@ -1,0 +1,1170 @@
+/* ============================================================
+   ESTILO GLOBAL - EQUIPE DE ROBÓTICA
+   Paleta: Verde #31A901 | Bege #EDEDED
+   ============================================================ */
+
+/* --- Variáveis de cor e fonte --- */
+:root {
+  --verde: #31A901;
+  --verde-escuro: #268a01;
+  --verde-claro: #e8f9e0;
+  --bege: #EDEDED;
+  --bege-escuro: #d8d8d8;
+  --branco: #ffffff;
+  --preto: #1a1a1a;
+  --cinza-texto: #444444;
+  --sombra: 0 2px 12px rgba(0, 0, 0, 0.10);
+  --raio: 8px;
+  --fonte-titulo: 'Montserrat', sans-serif;
+  --fonte-corpo: 'Open Sans', sans-serif;
+}
+
+/* --- Reset básico --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  color: var(--preto);
+  background-color: var(--branco);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--verde);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- Tipografia geral --- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  color: var(--preto);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--cinza-texto);
+}
+
+/* --- Layout utilitário --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secao {
+  padding: 64px 0;
+}
+
+.secao-fundo-bege {
+  background-color: var(--bege);
+}
+
+.secao-fundo-verde {
+  background-color: var(--verde);
+}
+
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.subtitulo-secao {
+  text-align: center;
+  color: var(--cinza-texto);
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.divisor {
+  width: 56px;
+  height: 4px;
+  background-color: var(--verde);
+  margin: 12px auto 32px auto;
+  border-radius: 2px;
+}
+
+
+/* ============================================================
+   HEADER / NAVEGAÇÃO
+   ============================================================ */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--branco);
+  box-shadow: var(--sombra);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Logo e nome */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-area img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Placeholder caso não haja logo */
+.logo-placeholder {
+  width: 48px;
+  height: 48px;
+  background-color: var(--verde);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: var(--fonte-titulo);
+  flex-shrink: 0;
+}
+
+.logo-area .nome-equipe {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--preto);
+  line-height: 1.2;
+}
+
+.logo-area .nome-equipe span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--cinza-texto);
+}
+
+/* Menu de navegação desktop */
+nav ul {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+nav ul li a {
+  font-family: var(--fonte-titulo);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--cinza-texto);
+  padding: 6px 12px;
+  border-radius: var(--raio);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.ativo {
+  background-color: var(--verde-claro);
+  color: var(--verde-escuro);
+  text-decoration: none;
+}
+
+/* Botão hamburguer (mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: var(--preto);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+
+/* ============================================================
+   HERO (BANNER PRINCIPAL) - usado na página inicial
+   ============================================================ */
+
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px 60px;
+  margin-top: 76px;
+  overflow: hidden;
+}
+
+/* Container dos slides de fundo */
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Cada slide é uma div com background-image */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+/* Slide ativo fica visível */
+.hero-slide.ativo {
+  opacity: 1;
+}
+
+/* Camada escura por cima das fotos */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.48);
+  z-index: 1;
+}
+
+/* Texto fica acima de tudo */
+.hero-conteudo {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-conteudo {
+  max-width: 700px;
+}
+
+.hero-conteudo h1 {
+  color: var(--branco);
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-conteudo p {
+  color: var(--bege);
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+}
+
+/* Botão principal */
+.btn {
+  display: inline-block;
+  padding: 13px 32px;
+  border-radius: var(--raio);
+  font-family: var(--fonte-titulo);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.15s;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.btn-verde {
+  background-color: var(--verde);
+  color: var(--branco);
+  border-color: var(--verde);
+}
+
+.btn-verde:hover {
+  background-color: var(--verde-escuro);
+  border-color: var(--verde-escuro);
+}
+
+.btn-contorno {
+  background-color: transparent;
+  color: var(--branco);
+  border-color: var(--branco);
+}
+
+.btn-contorno:hover {
+  background-color: var(--branco);
+  color: var(--verde-escuro);
+}
+
+.btn-contorno-verde {
+  background-color: transparent;
+  color: var(--verde);
+  border-color: var(--verde);
+}
+
+.btn-contorno-verde:hover {
+  background-color: var(--verde);
+  color: var(--branco);
+}
+
+.hero-botoes {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* ============================================================
+   SEÇÃO: APRESENTAÇÃO (página inicial)
+   ============================================================ */
+
+.apresentacao-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.apresentacao-foto {
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.apresentacao-foto img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+/* Placeholder de imagem */
+.foto-placeholder {
+  width: 100%;
+  height: 340px;
+  background-color: var(--bege-escuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--cinza-texto);
+  font-size: 0.9rem;
+  gap: 8px;
+}
+
+.foto-placeholder .icone-foto {
+  font-size: 2.5rem;
+  opacity: 0.4;
+}
+
+
+/* ============================================================
+   SEÇÃO: PATROCINADORES (home e página dedicada)
+   ============================================================ */
+
+.patrocinadores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.card-patrocinador {
+  background-color: var(--branco);
+  border: 1px solid var(--bege-escuro);
+  border-radius: var(--raio);
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: var(--sombra);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-patrocinador:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-patrocinador img {
+  height: 72px;
+  width: auto;
+  margin: 0 auto 14px;
+  object-fit: contain;
+}
+
+/* Placeholder de logo */
+.logo-placeholder-card {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  background-color: var(--bege);
+  border-radius: 6px;
+  color: var(--cinza-texto);
+  font-size: 0.8rem;
+}
+
+.card-patrocinador h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.card-patrocinador p {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  color: var(--cinza-texto);
+}
+
+
+/* ============================================================
+   SEÇÃO: RECRUTAMENTO / CTA (Call to Action)
+   ============================================================ */
+
+.cta-box {
+  background-color: var(--verde);
+  border-radius: var(--raio);
+  padding: 48px 40px;
+  text-align: center;
+}
+
+.cta-box h2 {
+  color: var(--branco);
+  margin-bottom: 12px;
+}
+
+.cta-box p {
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 28px;
+  font-size: 1.05rem;
+}
+
+.cta-box .btn-contorno {
+  font-size: 1rem;
+}
+
+
+/* ============================================================
+   HERO INTERNO - páginas internas (sem banner grande)
+   ============================================================ */
+
+.hero-interno {
+  background-color: var(--verde);
+  padding: 100px 20px 48px;
+  text-align: center;
+}
+
+.hero-interno h1 {
+  color: var(--branco);
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero-interno p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+
+/* ============================================================
+   GALERIA (página sobre)
+   ============================================================ */
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.galeria-item {
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  aspect-ratio: 4/3;
+  background-color: var(--bege-escuro);
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.galeria-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Placeholder para galeria */
+.galeria-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--cinza-texto);
+  font-size: 0.82rem;
+  gap: 6px;
+  opacity: 0.6;
+}
+
+
+/* ============================================================
+   REDES SOCIAIS
+   ============================================================ */
+
+.redes-lista {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rede-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--branco);
+  border: 2px solid var(--verde);
+  color: var(--verde);
+  padding: 10px 22px;
+  border-radius: 32px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: var(--fonte-titulo);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.rede-link:hover {
+  background-color: var(--verde);
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.rede-link svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   CARDS DE GERAÇÃO / TEMPORADA (página equipe)
+   ============================================================ */
+
+.timeline-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card-temporada {
+  background-color: var(--branco);
+  border: 1px solid var(--bege-escuro);
+  border-left: 5px solid var(--verde);
+  border-radius: var(--raio);
+  padding: 28px 32px;
+  box-shadow: var(--sombra);
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.temporada-foto {
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+
+.temporada-foto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.temporada-badge {
+  display: inline-block;
+  background-color: var(--verde);
+  color: var(--branco);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--fonte-titulo);
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.temporada-badge.ftc {
+  background-color: var(--verde-escuro);
+}
+
+.temporada-badge.fll {
+  background-color: #5dbf00;
+}
+
+.card-temporada h3 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.temporada-ano {
+  color: var(--cinza-texto);
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+}
+
+.premiacoes-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.premiacao-tag {
+  background-color: var(--verde-claro);
+  color: var(--verde-escuro);
+  border: 1px solid var(--verde);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3px 12px;
+}
+
+
+/* ============================================================
+   PROJETOS (metodologia STEAM + downloads)
+   ============================================================ */
+
+.steam-bloco {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.steam-letras {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.letra-steam {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: var(--verde);
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-shadow: var(--sombra);
+}
+
+.materiais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card-material {
+  background-color: var(--branco);
+  border: 1px solid var(--bege-escuro);
+  border-radius: var(--raio);
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: var(--sombra);
+  transition: transform 0.2s;
+}
+
+.card-material:hover {
+  transform: translateY(-3px);
+}
+
+.card-material .icone-arquivo {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  color: var(--verde);
+}
+
+.card-material h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.card-material p {
+  font-size: 0.82rem;
+  margin-bottom: 14px;
+}
+
+
+/* ============================================================
+   ROBÓTICA (missão, FIRST, campeonatos)
+   ============================================================ */
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.info-card {
+  background-color: var(--branco);
+  border-top: 4px solid var(--verde);
+  border-radius: var(--raio);
+  padding: 28px 24px;
+  box-shadow: var(--sombra);
+}
+
+.info-card .icone-card {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.info-card h3 {
+  margin-bottom: 8px;
+}
+
+.campeonatos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.campeonato-card {
+  background-color: var(--branco);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.campeonato-cabecalho {
+  background-color: var(--verde);
+  padding: 20px 24px;
+  color: var(--branco);
+}
+
+.campeonato-cabecalho h3 {
+  color: var(--branco);
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.campeonato-cabecalho span {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+.campeonato-corpo {
+  padding: 20px 24px;
+}
+
+.campeonato-corpo p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   CONTATOS
+   ============================================================ */
+
+.contato-centro {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contato-centro h2 {
+  margin-bottom: 12px;
+}
+
+.contato-centro p {
+  margin-bottom: 28px;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+  background-color: var(--preto);
+  color: var(--bege);
+  padding: 48px 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-sobre p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.footer-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-logo-area img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.footer-logo-area .logo-placeholder {
+  width: 40px;
+  height: 40px;
+  font-size: 0.95rem;
+}
+
+.footer-logo-area span {
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--branco);
+}
+
+.footer-coluna h4 {
+  color: var(--branco);
+  font-size: 0.95rem;
+  font-family: var(--fonte-titulo);
+  margin-bottom: 14px;
+}
+
+.footer-coluna ul li {
+  margin-bottom: 8px;
+}
+
+.footer-coluna ul li a {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+.footer-coluna ul li a:hover {
+  color: var(--verde);
+  text-decoration: none;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.footer-bottom a {
+  color: var(--verde);
+}
+
+
+/* ============================================================
+   PÁGINA SOBRE - bloco de história
+   ============================================================ */
+
+.historia-texto {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.historia-texto p {
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .apresentacao-grid,
+  .steam-bloco,
+  .campeonatos-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-temporada {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+
+  /* Menu mobile */
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--branco);
+    box-shadow: var(--sombra);
+    padding: 12px 0;
+  }
+
+  nav.aberto {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0 16px;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .hero-conteudo h1 {
+    font-size: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .cta-box {
+    padding: 32px 20px;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .secao {
+    padding: 40px 0;
+  }
+}
+
+.membros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.card-membro {
+  background-color: var(--branco);
+  border: 1px solid var(--bege-escuro);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-membro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-membro-foto {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background-color: var(--bege-escuro);
+}
+
+/* Placeholder quando não há foto */
+.card-membro-foto-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--bege);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--verde);
+}
+
+.card-membro-info {
+  padding: 16px 14px;
+}
+
+.card-membro-info h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.card-membro-info .cargo {
+  font-size: 0.82rem;
+  color: var(--verde-escuro);
+  font-weight: 600;
+  font-family: var(--fonte-titulo);
+}
+
+/* Bloco de voltar */
+.voltar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--cinza-texto);
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: var(--fonte-titulo);
+  margin-bottom: 32px;
+  transition: color 0.2s;
+}
+
+.voltar-link:hover {
+  color: var(--verde);
+  text-decoration: none;
+}
+
+/* Resumo da temporada no topo */
+.resumo-temporada {
+  background-color: var(--bege);
+  border-left: 5px solid var(--verde);
+  border-radius: var(--raio);
+  padding: 20px 24px;
+  margin-bottom: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resumo-temporada-info h2 {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.resumo-temporada-info p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--cinza-texto);
+}
+
+@media (max-width: 640px) {
+  .membros-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+/* ============================================================
+   TÉCNICO E MENTORES (página de membros)
+   ============================================================ */
+
+.secao-apoio {
+  margin-top: 56px;
+}
+
+.apoio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+/* Badge dourado para diferenciar do cargo dos membros */
+.card-membro-info .cargo-apoio {
+  font-size: 0.82rem;
+  color: #a07800;
+  font-weight: 600;
+  font-family: var(--fonte-titulo);
+}

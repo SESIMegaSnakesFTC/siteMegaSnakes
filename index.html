@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Início — SESI MEGASNAKES</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animacoes.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-inner">
+
+      <!-- Logo e nome -->
+      <a href="index.html" class="logo-area">
+        <img src="fotos/logo-01.png" alt="Logo da equipe FLL" />
+        <img src="fotos/logo-02.png" alt="Logo da equipe FTC" />
+        <div class="nome-equipe">
+          SESI MEGASNAKES
+          <span>FLL · FTC | #11203 · #31879 </span>
+        </div>
+      </a>
+
+      <!-- Botão hamburguer (mobile) -->
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navegação -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="geracoes.html">Gerações</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="patrocinadores.html">Patrocinadores</a></li>
+          <li><a href="robotica.html">Robótica</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ===== HERO ===== -->
+  <!--
+    Adicione a foto de fundo no arquivo css/style.css,
+    na seção ".hero", trocando o url('../fotos/hero-banner.jpg')
+    pelo caminho correto da sua imagem.
+  -->
+  <!-- ===== HERO COM CARROSSEL DE FOTOS ===== -->
+  <section class="hero">
+
+    <!-- Slides de fundo -->
+    <div class="hero-slides">
+      <!-- Adicione ou remova <div class="hero-slide"> conforme o número de fotos -->
+      <div class="hero-slide" style="background-image: url('fotos/galeria-01.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('fotos/galeria-02.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('fotos/galeria-03.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('fotos/galeria-04.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('fotos/galeria-05.jpg');"></div>
+    </div>
+
+    <!-- Escurecimento por cima das fotos -->
+    <div class="hero-overlay"></div>
+
+    <!-- Texto centralizado (não muda) -->
+    <div class="hero-conteudo">
+      <h1>Construindo o futuro<br>com ciência e tecnologia</h1>
+      <p>
+        Somos o SESI MEGASNAKES, uma equipe de robótica apaixonada por inovação,
+        aprendizado e trabalho em equipe. Participamos dos campeonatos FLL e FTC da FIRST.
+      </p>
+      <div class="hero-botoes">
+        <a href="sobre.html" class="btn btn-verde">Conheça a equipe</a>
+        <a href="contato.html" class="btn btn-contorno">Seja um patrocinador/consultor técnico</a>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ===== APRESENTAÇÃO ===== -->
+  <section class="secao">
+    <div class="container">
+      <div class="apresentacao-grid">
+
+        <!-- Foto da equipe -->
+        <div class="apresentacao-foto animar">
+          <img src="fotos/equipe-principal.jpg" alt="Foto da equipe" />
+        </div>
+
+        <!-- Texto de apresentação -->
+        <div class="animar">
+          <h2>Quem somos</h2>
+          <div class="divisor" style="margin-left:0;"></div>
+          <p>
+            Nós somos o SESI MEGASNAKES, uma equipe que carrega no nome a identidade de Boituva — “Grandes Cobras”, em
+            Tupi-Guarani — um símbolo que nos inspira a seguir com força, respeito e resiliência
+          </p>
+          <p>
+            <!-- Substitua pelo texto de apresentação da equipe -->
+            Tudo começou em 2013. Tivemos diversos integrantes durante todo esse período, todos foram muito especiais,
+            como nossa equipe atual!
+          </p>
+          <p>
+            A cada temporada buscamos ter novas experiências, aprendizados, emoções e conquistas, sempre fazendo o nosso
+            melhor.
+          </p>
+          <p>
+            Dentro de todas as temporadas alguns integrantes tiveram a oportunidade de disputar o TORNEIOS MUNDIAS!
+            Assim, acumulamos 3 idas para torneios internacionais de FLL.
+          </p>
+          <a href="sobre.html" class="btn btn-contorno-verde">Nossa história →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== PATROCINADORES ===== -->
+  <section class="secao secao-fundo-bege">
+    <div class="container">
+      <h2 class="titulo-secao animar">Nossos Patrocinadores e Consultores Técnicos</h2>
+      <div class="divisor"></div>
+      <p class="subtitulo-secao animar">
+        Agradecemos a todas as empresas e pessoas que acreditam no nosso trabalho.
+      </p>
+
+      <div class="patrocinadores-grid">
+        <!--
+          COMO ADICIONAR UM PATROCINADOR:
+          Copie o bloco "card-patrocinador" abaixo e cole quantas vezes precisar.
+          Troque o conteúdo pelos dados reais do patrocinador.
+        -->
+
+        <div class="card-patrocinador animar">
+          <img src="fotos/patrocinadores/SESI.png" alt="Logo Escola SESI" />
+          <h3>SESI</h3>
+          <p>
+            O Serviço Social da Indústria (SESI) atua nas áreas de educação, saúde, esporte e qualidade de vida para
+            trabalhadores da indústria e suas famílias, contribuindo para o desenvolvimento social e industrial.
+          </p>
+        </div>
+
+        <div class="card-patrocinador animar">
+          <img src="fotos/patrocinadores/PALLET_EVE.png" alt="Logo Empresa PALLET EVE" />
+          <h3>PALLET EVE</h3>
+          <p>
+            Empresa do setor logístico especializada na fabricação e fornecimento de pallets de madeira para transporte
+            e armazenamento de cargas.
+          </p>
+        </div>
+
+        <div class="card-patrocinador animar">
+          <img src="fotos/patrocinadores/DELTANET.png" alt="Logo Empresa Deltanet" />
+          <h3>Deltanet</h3>
+          <p>
+            Empresa de telecomunicações que oferece serviços de internet e conectividade, buscando levar acesso digital
+            com qualidade e estabilidade.
+          </p>
+        </div>
+
+        <div class="card-patrocinador animar">
+          <img src="fotos/patrocinadores/SUPERVISION.png" alt="Logo Empresa SUPERVISION" />
+          <h3>SUPERVISION</h3>
+          <p>
+            Atua com soluções tecnológicas de monitoramento e segurança, oferecendo sistemas que aumentam a proteção e o
+            controle de ambientes.
+          </p>
+        </div>
+
+      </div><!-- fim .patrocinadores-grid -->
+
+      <div style="text-align:center; margin-top:32px;">
+        <a href="patrocinadores.html" class="btn btn-contorno-verde">Ver todos os patrocinadores →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CTA - RECRUTAMENTO DE PATROCÍNIO ===== -->
+  <section class="secao">
+    <div class="container">
+      <div class="cta-box animar">
+        <h2>Apoie a próxima geração de inovadores</h2>
+        <p>
+          Patrocinar a nossa equipe é uma forma de investir diretamente na educação e no desenvolvimento de jovens
+          talentos. Em troca, sua empresa recebe visibilidade nos nossos materiais, uniformes e redes sociais. Além
+          disso, profissionais da sua empresa também podem participar como consultores técnicos, compartilhando
+          conhecimento e contribuindo diretamente para o aprendizado e crescimento da equipe.
+        </p>
+        <a href="contato.html" class="btn btn-contorno">Quero ser patrocinador/consultor técnico</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-sobre">
+          <div class="footer-logo-area">
+            <img src="fotos/logo-01.png" alt="Logo da equipe FLL" />
+            <img src="fotos/logo-02.png" alt="Logo da equipe FTC" />
+            <span>SESI MEGASNAKES</span>
+          </div>
+          <p>
+            Equipe de robótica comprometida com educação STEAM e com o desenvolvimento
+            de jovens talentos por meio da tecnologia e da competição saudável.
+          </p>
+        </div>
+
+        <div class="footer-coluna">
+          <h4>Páginas</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="geracoes.html">Gerações</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="patrocinadores.html">Patrocinadores</a></li>
+            <li><a href="robotica.html">Robótica</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-coluna">
+          <h4>Redes Sociais</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/megasnakes">Instagram - FLL</a></li>
+            <li><a href="https://www.instagram.com/megasnakes_ftc">Instagram - FTC</a></li>
+            <li><a href="https://www.youtube.com/@MegaSnakesFTC">YouTube</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+
+      </div><!-- fim .footer-grid -->
+
+      <div class="footer-bottom">
+        <p>© <span id="ano-atual"></span> SESI MEGASNAKES. Todos os direitos reservados.</p>
+        <p>Feito com ❤ pelos membros da equipe.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para preencher o ano automaticamente -->
+  <script>
+    document.getElementById('ano-atual').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Script principal -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
