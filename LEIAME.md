@@ -1,4 +1,4 @@
-# Site da Equipe de Robótica — Guia de Manutenção
+# Site da Equipe de Robótica - Guia de Manutenção
 
 Este guia explica como editar e manter o site. Não é necessário conhecimento avançado de programação!
 
