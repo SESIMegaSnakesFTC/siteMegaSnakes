@@ -14,6 +14,95 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animacoes.css" />
+  <style>
+    .metrics {
+      display: flex;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap
+    }
+
+    .metric-card {
+      flex: 1 1 150px;
+      background: #f6f7fb;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06)
+    }
+
+    .metric-value {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0b6;
+    }
+
+    .metric-label {
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 0.25rem
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 1rem
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #eee;
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .gallery-placeholder {
+      position: absolute;
+      color: #666;
+      font-size: 0.9rem;
+      padding: 8px;
+      text-align: center
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 999
+    }
+
+    .lightbox img {
+      max-width: 95%;
+      max-height: 90%;
+      border-radius: 6px
+    }
+
+    .lightbox .close {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      font-size: 1.4rem
+    }
+  </style>
 </head>
 
 <body>
@@ -68,12 +157,58 @@
 
       <div class="animar">
         <p>
-          Descrição inicial do projeto EcoSnakes. Conteúdo temporário para ser substituído posteriormente.
+          O EcoSnakes promove oficinas STEAM sustentáveis usando materiais recicláveis para ensinar princípios de
+          ciência, engenharia e criatividade a crianças e jovens. As atividades incluem projetos práticos como carrinho
+          a
+          elástico, catapulta, Robô Blinker e demonstrações com LEGO Technic.
         </p>
         <p>
-          Esta página foi criada para receber informações detalhadas sobre objetivos, resultados, materiais e
-          parceiros do projeto.
+          Em parceria com o Instituto Vila Pet, a Fundação Crescer Criança e a
+          Prefeitura de Boituva, os pontos serão instalados em locais de grande circulação (escolas, centros
+          comunitários e espaços públicos), com sinalização para separação de materiais e cronograma de recolhimento.
+          Parceiros contribuirão com logística, divulgação e espaços para as oficinas; os materiais arrecadados serão
+          triados e usados nas atividades educativas e demonstrações do projeto.
         </p>
+        <p>
+          Abaixo estão métricas resumidas do projeto - horas aplicadas, público atendido e aspectos financeiros - e
+          uma pequena galeria para que você adicione fotos relacionadas ao EcoSnakes.
+        </p>
+
+        <!-- MÉTRICAS -->
+        <div class="metrics" aria-label="Métricas do projeto">
+          <div class="metric-card">
+            <div class="metric-value" data-target="120">0</div>
+            <div class="metric-label">Horas de atividades</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" data-target="800">0</div>
+            <div class="metric-label">Pessoas atingidas</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value" data-target="3500">R$ <span>0</span></div>
+            <div class="metric-label">Financiamento / Gastos (R$)</div>
+          </div>
+        </div>
+
+        <!-- GALERIA -->
+        <h3>Galeria</h3>
+        <p class="pequeno">Adicione imagens em <em>fotos/ecosnakes/</em> com nomes como <em>photo1.jpg</em>,
+          <em>photo2.jpg</em>.</p>
+        <div class="gallery-grid" id="gallery">
+          <div class="gallery-item">
+            <img src="fotos/ecosnakes/photo1.jpg" alt="Foto EcoSnakes 1" />
+            <div class="gallery-placeholder">Adicionar fotos em fotos/ecosnakes/</div>
+          </div>
+          <div class="gallery-item">
+            <img src="fotos/ecosnakes/photo2.jpg" alt="Foto EcoSnakes 2" />
+            <div class="gallery-placeholder">Adicionar fotos em fotos/ecosnakes/</div>
+          </div>
+          <div class="gallery-item">
+            <img src="fotos/ecosnakes/photo3.jpg" alt="Foto EcoSnakes 3" />
+            <div class="gallery-placeholder">Adicionar fotos em fotos/ecosnakes/</div>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -128,6 +263,60 @@
   <!-- Script para preencher o ano automaticamente -->
   <script>
     document.getElementById('ano-atual').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    // Contadores animados
+    (function () {
+      const els = document.querySelectorAll('.metric-value');
+      els.forEach(el => {
+        const target = parseInt(el.getAttribute('data-target')) || 0;
+        const span = el.querySelector('span');
+        const isMoney = Boolean(span);
+        const duration = 1400;
+        let start = 0;
+        const startTime = performance.now();
+        function tick(now) {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const value = Math.floor(progress * target);
+          if (isMoney) { span.textContent = value.toLocaleString('pt-BR'); }
+          else { el.textContent = value; }
+          if (progress < 1) requestAnimationFrame(tick);
+          else { if (isMoney) span.textContent = target.toLocaleString('pt-BR'); else el.textContent = target; }
+        }
+        requestAnimationFrame(tick);
+      });
+    })();
+
+    // Lightbox simples para galeria
+    (function () {
+      const gallery = document.getElementById('gallery');
+      if (!gallery) return;
+      const lightbox = document.createElement('div');
+      lightbox.className = 'lightbox';
+      lightbox.innerHTML = '<button class="close" aria-label="Fechar">✕</button><img alt=""/>';
+      document.body.appendChild(lightbox);
+      const lbImg = lightbox.querySelector('img');
+      const closeBtn = lightbox.querySelector('.close');
+      gallery.querySelectorAll('img').forEach(img => {
+        img.addEventListener('click', e => {
+          lbImg.src = img.src;
+          lightbox.style.display = 'flex';
+        });
+        img.addEventListener('load', () => {
+          const ph = img.nextElementSibling;
+          if (ph && ph.classList.contains('gallery-placeholder')) ph.style.display = 'none';
+        });
+        img.addEventListener('error', () => {
+          img.style.opacity = '0.35';
+          const ph = img.nextElementSibling;
+          if (ph && ph.classList.contains('gallery-placeholder')) ph.style.display = 'block';
+        });
+      });
+      function close() { lightbox.style.display = 'none'; lbImg.src = ''; }
+      closeBtn.addEventListener('click', close);
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+    })();
   </script>
 
   <script src="js/script.js"></script>
