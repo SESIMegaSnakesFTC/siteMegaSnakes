@@ -58,7 +58,7 @@
   </div>
 
 
-  <!-- ===== PATROCINADORES ===== -->
+  <!-- ===== PATROCINADORES (COM HIERARQUIA) ===== -->
   <section class="secao">
     <div class="container">
       <h2 class="titulo-secao animar">Quem nos apoia</h2>
@@ -68,29 +68,94 @@
         nos campeonatos e o desenvolvimento dos nossos projetos.
       </p>
 
-      <div class="patrocinadores-grid">
-        <!--
-          COMO ADICIONAR UM PATROCINADOR:
-          1. Copie o bloco "card-patrocinador" abaixo.
-          2. Descomente a tag <img> e troque o caminho pela logo real.
-          3. Troque o nome e a descrição.
-          4. Salve a logo na pasta "fotos/patrocinadores/".
+      <!--
+        COMO ADICIONAR UM PATROCINADOR:
+        1. Escolha o nível (master, grande, médio ou pequeno).
+        2. Copie um bloco já existente desse nível e cole logo abaixo dele.
+        3. Troque o caminho da logo, o nome e a descrição.
+        4. Salve a logo em "fotos/patrocinadores/" (PNG com fundo transparente).
+        Os patrocinadores PEQUENOS têm apenas a logo, sem descrição.
+      -->
 
-          Tamanho recomendado para as logos: largura máxima 300px, fundo transparente (PNG).
-        -->
+      <!-- ========== NÍVEL 1: MEGA ========== -->
+      <div class="nivel-patro">
+        <div class="nivel-titulo animar"><h3>Mega Partner</h3></div>
 
-        <div class="card-patrocinador animar">
-          <img src="fotos/patrocinadores/SESI.png" alt="Logo Escola SESI" />
-          <h3>SESI</h3>
-          <p>
-            O Serviço Social da Indústria (SESI) atua nas áreas de educação, saúde, esporte e qualidade de vida para
-            trabalhadores da indústria e suas famílias, contribuindo para o desenvolvimento social e industrial.
-          </p>
+        <div class="patro-master animar">
+          <div class="patro-logo">
+            <img src="fotos/patrocinadores/SESI.png" alt="Logo SESI" />
+          </div>
+          <div class="patro-texto">
+            <h3>SESI</h3>
+            <p>
+              O Serviço Social da Indústria (SESI) atua nas áreas de educação, saúde, esporte e qualidade de vida para
+              trabalhadores da indústria e suas famílias, contribuindo para o desenvolvimento social e industrial.
+            </p>
+          </div>
         </div>
-        
-
-        <!-- Adicione mais cards de patrocinadores conforme necessário -->
       </div>
+
+
+      <!-- ========== NÍVEL 2: WOODIE FLOWERS ========== -->
+      <div class="nivel-patro">
+        <div class="nivel-titulo animar"><h3>Woodie Flowers Partners</h3></div>
+
+        <div class="patro-grandes">
+
+          <div class="patro-grande animar">
+            <div class="patro-logo">
+              <img src="fotos/patrocinadores/SCANTECH.png" alt="Logo Scantech" />
+            </div>
+            <div class="patro-texto">
+              <h3>Scantech</h3>
+              <p>
+                <!-- TROCAR PELA DESCRIÇÃO REAL DA EMPRESA -->
+                A Scantech Automação Industrial é uma empresa especializada em soluções de automação, equipamentos
+                e suporte técnico, ajudando indústrias a tornar seus processos mais eficientes, seguros e tecnológicos.
+              </p>
+              <!-- Opcional: link para o site da empresa (apague se não quiser)
+              <a class="patro-link" href="https://site-da-empresa.com.br" target="_blank" rel="noopener">Conhecer</a>
+              -->
+            </div>
+          </div>
+
+          <!-- Copie o bloco acima para adicionar outro patrocinador grande -->
+
+        </div>
+      </div>
+
+
+      <!-- ========== NÍVEL 4: SUSTAIN ========== -->
+      <div class="nivel-patro">
+        <div class="nivel-titulo animar"><h3>Sustain Partners</h3></div>
+
+        <div class="patro-pequenos animar">
+
+          <div class="patro-pequeno">
+            <img src="fotos/patrocinadores/SURGITEC.png" alt="Logo Surgitec" />
+          </div>
+
+          <!-- Copie um bloco "patro-pequeno" para adicionar outro apoiador -->
+
+        </div>
+      </div>
+
+
+      <!-- ========== NÍVEL 4: GRACIOUS ========== -->
+      <div class="nivel-patro">
+        <div class="nivel-titulo animar"><h3>Gracious Partners</h3></div>
+
+        <div class="patro-pequenos animar">
+
+          <div class="patro-pequeno">
+            <img src="fotos/patrocinadores/MONTERA.png" alt="Logo Montera" />
+          </div>
+
+          <!-- Copie um bloco "patro-pequeno" para adicionar outro apoiador -->
+
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -106,7 +171,7 @@
           disso, profissionais da sua empresa também podem participar como consultores técnicos, compartilhando
           conhecimento e contribuindo diretamente para o aprendizado e crescimento da equipe.
         </p>
-        <a href="contato.html" class="btn btn-contorno">Quero ser patrocinador/consultor técnico</a>
+        <a href="contato.html" class="btn btn-contorno">Quero ser patrocinador/mentor</a>
       </div>
     </div>
   </section>
