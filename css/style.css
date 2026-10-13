@@ -1227,24 +1227,6 @@ footer {
   margin-bottom: 0;
 }
 
-.patro-link {
-  display: inline-block;
-  margin-top: 14px;
-  font-family: var(--fonte-titulo);
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: var(--branco);
-  background-color: var(--verde);
-  padding: 7px 18px;
-  border-radius: var(--raio);
-  transition: background-color 0.2s;
-}
-
-.patro-link:hover {
-  background-color: var(--verde-escuro);
-  text-decoration: none;
-}
-
 /* --- MASTER (SESI): maior destaque --- */
 .patro-master {
   display: grid;
@@ -1396,4 +1378,46 @@ footer {
   .nivel-patro {
     margin-top: 44px;
   }
+}
+
+/* --- Card inteiro clicável --- */
+a.patro-master,
+a.patro-grande {
+  color: inherit;
+  cursor: pointer;
+  /* mantém o fade-in do .animar e adiciona o efeito de hover */
+  transition: opacity 0.55s ease, transform 0.55s ease, box-shadow 0.2s, border-color 0.2s;
+}
+
+a.patro-master:hover,
+a.patro-grande:hover {
+  text-decoration: none;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+a.patro-grande:hover {
+  border-left-color: var(--verde-escuro);
+}
+
+a.patro-master:hover {
+  border-color: var(--verde-escuro);
+}
+
+/* Foco por teclado (acessibilidade) */
+a.patro-master:focus-visible,
+a.patro-grande:focus-visible,
+a.patro-pequeno:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 4px;
+}
+
+/* Logos pequenas: colorir ao passar o mouse sobre o link */
+a.patro-pequeno {
+  text-decoration: none;
+}
+
+a.patro-pequeno:hover img {
+  filter: grayscale(0);
+  opacity: 1;
 }

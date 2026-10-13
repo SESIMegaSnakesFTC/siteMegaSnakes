@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
+ 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Patrocinadores - SESI MEGASNAKES</title>
-
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
     rel="stylesheet" />
-
+ 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animacoes.css" />
 </head>
-
+ 
 <body>
-
+ 
   <!-- ===== HEADER ===== -->
   <header>
     <div class="header-inner">
@@ -29,13 +29,13 @@
           <span>FLL · FTC | #11203 · #31879 </span>
         </div>
       </a>
-
+ 
       <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
+ 
       <nav>
         <ul>
           <li><a href="index.html">Início</a></li>
@@ -49,15 +49,15 @@
       </nav>
     </div>
   </header>
-
-
+ 
+ 
   <!-- ===== HERO INTERNO ===== -->
   <div class="hero-interno">
     <h1>Patrocinadores</h1>
     <p>Empresas e pessoas que acreditam no poder da educação e da inovação.</p>
   </div>
-
-
+ 
+ 
   <!-- ===== PATROCINADORES (COM HIERARQUIA) ===== -->
   <section class="secao">
     <div class="container">
@@ -67,21 +67,23 @@
         Agradecemos imensamente a cada patrocinador que torna possível nossa participação
         nos campeonatos e o desenvolvimento dos nossos projetos.
       </p>
-
+ 
       <!--
         COMO ADICIONAR UM PATROCINADOR:
-        1. Escolha o nível (master, grande, médio ou pequeno).
-        2. Copie um bloco já existente desse nível e cole logo abaixo dele.
-        3. Troque o caminho da logo, o nome e a descrição.
+        1. Escolha o nível (Mega, Woodie Flowers, Sustain ou Gracious).
+        2. Copie um bloco <a> já existente desse nível e cole logo abaixo dele.
+        3. Troque o link (href), o caminho da logo, o nome e a descrição.
         4. Salve a logo em "fotos/patrocinadores/" (PNG com fundo transparente).
-        Os patrocinadores PEQUENOS têm apenas a logo, sem descrição.
+        Os patrocinadores Sustain e Gracious têm apenas a logo, sem descrição.
+        O bloco inteiro é um link: clicar na logo ou no texto abre o site.
       -->
-
+ 
       <!-- ========== NÍVEL 1: MEGA ========== -->
       <div class="nivel-patro">
         <div class="nivel-titulo animar"><h3>Mega Partner</h3></div>
-
-        <div class="patro-master animar">
+ 
+        <a href="https://www.sesisp.org.br/" class="patro-master animar" target="_blank" rel="noopener noreferrer"
+          aria-label="Visitar o site do SESI">
           <div class="patro-logo">
             <img src="fotos/patrocinadores/SESI.png" alt="Logo SESI" />
           </div>
@@ -91,93 +93,90 @@
               O Serviço Social da Indústria (SESI) atua nas áreas de educação, saúde, esporte e qualidade de vida para
               trabalhadores da indústria e suas famílias, contribuindo para o desenvolvimento social e industrial.
             </p>
-            <a href="https://www.sesisp.org.br/" class="patro-link" target="_blank" rel="noopener" >Conhecer</a>
-        
           </div>
-        </div>
+        </a>
       </div>
-
-
+ 
+ 
       <!-- ========== NÍVEL 2: WOODIE FLOWERS ========== -->
-       
       <div class="nivel-patro">
         <div class="nivel-titulo animar"><h3>Woodie Flowers Partners</h3></div>
-
+ 
         <div class="patro-grandes">
-
-          <div class="patro-grande animar">
+ 
+          <a href="https://www.eliantec.com.br/" class="patro-grande animar" target="_blank" rel="noopener noreferrer"
+            aria-label="Visitar o site da Eliantec">
             <div class="patro-logo">
               <img src="fotos/patrocinadores/ELIANTEC.png" alt="Logo Eliantec" />
             </div>
             <div class="patro-texto">
               <h3>Eliantec</h3>
               <p>
-                <!-- TROCAR PELA DESCRIÇÃO REAL DA EMPRESA -->
                 A Eliantec é uma empresa especializada em soluções industriais, oferecendo tecnologia, precisão e
                 qualidade para atender às necessidades de seus clientes.
               </p>
-              <a href="https://www.eliantec.com.br/" class="patro-link" target="_blank" rel="noopener" >Conhecer</a>
-
             </div>
-          </div>
-
-          <div class="patro-grande animar">
+          </a>
+ 
+          <a href="http://www.scantech.ind.br/" class="patro-grande animar" target="_blank" rel="noopener noreferrer"
+            aria-label="Visitar o site da Scantech">
             <div class="patro-logo">
               <img src="fotos/patrocinadores/SCANTECH.png" alt="Logo Scantech" />
             </div>
             <div class="patro-texto">
               <h3>Scantech</h3>
               <p>
-                <!-- TROCAR PELA DESCRIÇÃO REAL DA EMPRESA -->
                 A Scantech Automação Industrial é uma empresa especializada em soluções de automação, equipamentos
                 e suporte técnico, ajudando indústrias a tornar seus processos mais eficientes, seguros e tecnológicos.
               </p>
-              <a href="http://www.scantech.ind.br/" class="patro-link" target="_blank" rel="noopener" >Conhecer</a>
-
             </div>
-          </div>
-
-          <!-- Copie o bloco acima para adicionar outro patrocinador grande -->
-
+          </a>
+ 
+          <!-- Copie um bloco <a class="patro-grande"> acima para adicionar outro patrocinador -->
+ 
         </div>
       </div>
-
-
-      <!-- ========== NÍVEL 4: SUSTAIN ========== -->
+ 
+ 
+      <!-- ========== NÍVEL 3: SUSTAIN ========== -->
       <div class="nivel-patro">
         <div class="nivel-titulo animar"><h3>Sustain Partners</h3></div>
-
+ 
         <div class="patro-pequenos animar">
-
-          <div class="patro-pequeno">
+ 
+          <!-- TROQUE O href PELO SITE REAL DA SURGITEC -->
+          <a class="patro-pequeno" href="https://www.surgitec.com.br/" target="_blank" rel="noopener noreferrer"
+            aria-label="Visitar o site da Surgitec">
             <img src="fotos/patrocinadores/SURGITEC.png" alt="Logo Surgitec" />
-          </div>
-
-          <!-- Copie um bloco "patro-pequeno" para adicionar outro apoiador -->
-
+          </a>
+ 
+          <!-- Copie um bloco <a class="patro-pequeno"> para adicionar outro apoiador -->
+ 
         </div>
       </div>
-
-
+ 
+ 
       <!-- ========== NÍVEL 4: GRACIOUS ========== -->
       <div class="nivel-patro">
         <div class="nivel-titulo animar"><h3>Gracious Partners</h3></div>
-
+ 
         <div class="patro-pequenos animar">
-
-          <div class="patro-pequeno">
+ 
+          <!-- TROQUE O href PELO SITE REAL DA MONTERA -->
+          <a class="patro-pequeno" href="https://montera.eng.br/" target="_blank" rel="noopener noreferrer"
+            aria-label="Visitar o site da Montera">
             <img src="fotos/patrocinadores/MONTERA.png" alt="Logo Montera" />
-          </div>
-
-          <!-- Copie um bloco "patro-pequeno" para adicionar outro apoiador -->
-
+          </a>
+ 
+          <!-- Copie um bloco <a class="patro-pequeno"> para adicionar outro apoiador -->
+ 
         </div>
       </div>
-
+ 
     </div>
   </section>
-
-
+ 
+ 
   <!-- ===== CTA - RECRUTAR PATROCINADORES ===== -->
   <section class="secao secao-fundo-bege">
     <div class="container">
@@ -193,8 +192,8 @@
       </div>
     </div>
   </section>
-
-
+ 
+ 
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
@@ -240,11 +239,11 @@
       </div>
     </div>
   </footer>
-
+ 
   <script>
     document.getElementById('ano-atual').textContent = new Date().getFullYear();
   </script>
   <script src="js/script.js"></script>
 </body>
-
+ 
 </html>
