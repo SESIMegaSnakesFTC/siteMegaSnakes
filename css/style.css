@@ -1519,3 +1519,135 @@ a.patro-pequeno:hover img {
   opacity: 1;
 }
 
+
+/* ============================================================
+   NINHO DE COBRAS — AJUSTES DE LAYOUT
+   ============================================================ */
+
+.ninho-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.ninho-intro-texto {
+  min-width: 0;
+}
+
+.ninho-foto-principal {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.ninho-destaques,
+.ninho-mural {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.ninho-card {
+  min-width: 0;
+  padding: 28px 24px;
+  background: var(--branco);
+  border: 1px solid var(--bege-escuro);
+  border-top: 5px solid var(--verde);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.ninho-card h3 {
+  margin-bottom: 10px;
+}
+
+.ninho-card p {
+  margin-bottom: 0;
+}
+
+.ninho-alinhamento {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ninho-calendly-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 32px auto 0;
+}
+
+.ninho-depoimento {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--branco);
+  border: 1px solid var(--bege-escuro);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.ninho-depoimento img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.ninho-depoimento-conteudo {
+  padding: 22px;
+}
+
+.ninho-depoimento-conteudo p {
+  margin-bottom: 12px;
+}
+
+.ninho-depoimento-conteudo h3 {
+  font-size: 1rem;
+}
+
+/* Botões sempre na cor padrão da equipe */
+.ninho-pagina .btn-verde {
+  background-color: var(--verde);
+  color: var(--branco);
+  border-color: var(--verde);
+}
+
+.ninho-pagina .btn-verde:hover {
+  background-color: var(--verde-escuro);
+  border-color: var(--verde-escuro);
+}
+
+@media (max-width: 900px) {
+  .ninho-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ninho-destaques,
+  .ninho-mural {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ninho-foto-principal {
+    height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ninho-destaques,
+  .ninho-mural {
+    grid-template-columns: 1fr;
+  }
+
+  .ninho-card {
+    padding: 24px 20px;
+  }
+
+  .ninho-foto-principal {
+    height: 240px;
+  }
+}

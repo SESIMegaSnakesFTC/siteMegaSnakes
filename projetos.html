@@ -1,19 +1,141 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projetos - SESI MEGASNAKES</title>
+
+  <title>MentoriaNinho de Cobras - SESI MEGASNAKES</title>
+
+  <meta
+    name="description"
+    content="Conheça o Ninho de Cobras, programa de mentoria da SESI MEGASNAKES para equipes da FIRST LEGO League (FLL)."
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet"
+  />
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animacoes.css" />
+
+  <!-- Estilos específicos da página Ninho de Cobras -->
+  <style>
+    .ninho-intro {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .ninho-intro p,
+    .ninho-texto p {
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .ninho-destaques {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .ninho-card {
+      padding: 28px 22px;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 5px 22px rgba(0, 0, 0, 0.07);
+      text-align: center;
+    }
+
+    .ninho-card h3 {
+      margin: 14px 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .ninho-card p {
+      line-height: 1.7;
+    }
+
+    .ninho-icone {
+      font-size: 2.5rem;
+    }
+
+    .ninho-texto {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .ninho-chamada {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 35px;
+    }
+
+    .ninho-chamada p {
+      line-height: 1.8;
+    }
+
+    .ninho-agendamento {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .ninho-calendly {
+      width: 100%;
+      min-width: 320px;
+      height: 750px;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .ninho-aviso {
+      margin-top: 22px;
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .ninho-botao {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 14px 26px;
+      border-radius: 8px;
+      background: #176b3a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .ninho-botao:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      .ninho-destaques {
+        grid-template-columns: 1fr;
+      }
+
+      .ninho-calendly {
+        height: 780px;
+        min-width: 0;
+      }
+
+      .ninho-agendamento {
+        padding: 0 8px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -21,16 +143,22 @@
   <!-- ===== HEADER ===== -->
   <header>
     <div class="header-inner">
+
       <a href="index.html" class="logo-area">
         <img src="fotos/logo-01.png" alt="Logo da equipe FLL" />
         <img src="fotos/logo-02.png" alt="Logo da equipe FTC" />
+
         <div class="nome-equipe">
           SESI MEGASNAKES
-          <span>FLL · FTC | #11203 · #31879 </span>
+          <span>FLL · FTC | #11203 · #31879</span>
         </div>
       </a>
 
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <button
+        class="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -41,148 +169,469 @@
           <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="geracoes.html">Gerações</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="projetos.html">Ninho de Cobras</a></li>
           <li><a href="patrocinadores.html">Apoiadores</a></li>
           <li><a href="robotica.html">Robótica</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
+
     </div>
   </header>
 
 
-  <!-- ===== HERO INTERNO ===== -->
-  <div class="hero-interno">
-    <h1>Projetos</h1>
-    <p>Metodologia STEM em prática e materiais educativos desenvolvidos pela equipe.</p>
-  </div>
+  ```html
+<!-- ===== HERO ===== -->
+<section class="hero-interno">
+  <h1>Ninho de Cobras</h1>
+  <p>
+    Compartilhando experiências, fortalecendo equipes
+    e formando o futuro da robótica.
+  </p>
+</section>
 
 
-  <!-- ===== STEM ===== -->
-  <section class="secao">
-    <div class="container">
-      <h2 class="titulo-secao animar">O que é STEM?</h2>
-      <div class="divisor"></div>
+<!-- ===== MUITO ALÉM DA COMPETIÇÃO ===== -->
+<section class="secao">
+  <div class="container">
 
-      <div class="steam-bloco">
+    <h2 class="titulo-secao animar">
+      Muito além da competição
+    </h2>
 
-        <div class="animar">
-          <!--
-            Substitua o texto abaixo pela explicação da metodologia STEM
-            que a equipe utiliza nos seus projetos.
-          -->
-          <p>
-            STEM é uma abordagem educacional que integra cinco áreas do conhecimento:
-            <strong>Ciência (Science)</strong>, <strong>Tecnologia (Technology)</strong>,
-            <strong>Engenharia (Engineering)</strong> e
-            <strong>Matemática (Mathematics)</strong>.
-          </p>
-          <p>
-            Na nossa equipe, aplicamos a metodologia STEM em todos os projetos,
-            incentivando os membros a pensar de forma interdisciplinar, criativa e
-            colaborativa para resolver problemas reais.
-          </p>
-          <p>
-            <!-- Adicione mais contexto sobre como a equipe aplica o STEM -->
-            Por meio dos desafios da FIRST, cada temporada apresenta um problema do
-            mundo real que é investigado e solucionado com base nessa metodologia,
-            desde o projeto do robô até a pesquisa de inovação apresentada nos torneios.
-          </p>
-        </div>
+    <div class="divisor"></div>
 
-        <div class="animar">
-          <div class="steam-letras">
-            <div class="letra-steam" title="Science - Ciência">S</div>
-            <div class="letra-steam" title="Technology - Tecnologia">T</div>
-            <div class="letra-steam" title="Engineering - Engenharia">E</div>
-            <div class="letra-steam" title="Mathematics - Matemática">M</div>
-          </div>
+    <div class="ninho-intro-grid">
 
-          <p style="text-align:center; margin-top:20px; font-size:0.88rem; color:var(--cinza-texto);">
-            Ciência · Tecnologia · Engenharia · Matemática
-          </p>
-        </div>
+      <div class="ninho-intro-texto animar">
+        <p>
+          A FIRST LEGO League é muito mais do que construir robôs.
+          É sobre investigar, criar soluções, trabalhar em equipe
+          e aprender com cada desafio.
+        </p>
 
+        <p>
+          O <strong>Ninho de Cobras</strong> é o programa de mentoria
+          da equipe <strong>SESI MEGASNAKES</strong>, criado para
+          compartilhar conhecimentos e experiências com outras
+          equipes da FIRST LEGO League.
+        </p>
+
+        <p>
+          Queremos apoiar equipes em sua jornada, promovendo a troca
+          de ideias, o desenvolvimento de habilidades e a construção
+          de soluções para os desafios da temporada.
+        </p>
+
+        <p>
+          Acreditamos que, quando compartilhamos o que aprendemos,
+          ajudamos toda a comunidade da robótica a crescer.
+        </p>
+
+        <a href="#agendamento" class="btn btn-verde">
+          Conheça nossa mentoria
+        </a>
       </div>
+
+      <div class="animar">
+        <!-- Troque pela foto real da equipe ou de uma atividade
+             de mentoria. -->
+        <img
+          src="fotos/ninho-mentoria.jpg"
+          alt="Equipe SESI MEGASNAKES em atividade de robótica"
+          class="ninho-foto-principal"
+          loading="lazy"
+        />
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 
-  <!-- ===== MATERIAIS DIDÁTICOS ===== -->
-  <!-- section class="secao secao-fundo-bege">
-    <div class="container">
-      <h2 class="titulo-secao animar">Materiais e Projetos</h2>
-      <div class="divisor"></div>
-      <p class="subtitulo-secao animar">
-        Nossa equipe desenvolve diversos projetos e iniciativas nas áreas de robótica, tecnologia e educação. Explore os
-        links para conhecer mais sobre nosso trabalho.
+<!-- ===== COMO FUNCIONA ===== -->
+<section class="secao secao-fundo-bege">
+  <div class="container">
+
+    <h2 class="titulo-secao animar">
+      Nossa mentoria
+    </h2>
+
+    <div class="divisor"></div>
+
+    <p class="subtitulo-secao animar">
+      Conhecimento compartilhado, novas perspectivas
+      e aprendizado em equipe.
+    </p>
+
+    <div class="ninho-destaques">
+
+      <article class="ninho-card animar">
+        <div class="ninho-icone" aria-hidden="true">🎯</div>
+
+        <h3>Orientação</h3>
+
+        <p>
+          Conversamos sobre os objetivos e os desafios de cada equipe,
+          buscando caminhos para apoiar seu desenvolvimento ao longo
+          da temporada.
+        </p>
+      </article>
+
+      <article class="ninho-card animar">
+        <div class="ninho-icone" aria-hidden="true">💡</div>
+
+        <h3>Troca de experiências</h3>
+
+        <p>
+          Compartilhamos aprendizados da nossa trajetória na FLL,
+          ideias, estratégias e experiências que podem inspirar
+          novas soluções.
+        </p>
+      </article>
+
+      <article class="ninho-card animar">
+        <div class="ninho-icone" aria-hidden="true">🚀</div>
+
+        <h3>Evolução contínua</h3>
+
+        <p>
+          Incentivamos a autonomia, a colaboração, a criatividade
+          e a organização, valorizando o aprendizado em todas
+          as etapas da competição.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== REUNIÃO DE ALINHAMENTO + CALENDLY ===== -->
+<section class="secao" id="agendamento">
+  <div class="container">
+
+    <h2 class="titulo-secao animar">
+      Gostou da proposta do Ninho de Cobras?
+    </h2>
+
+    <div class="divisor"></div>
+
+    <div class="ninho-alinhamento animar">
+
+      <p>
+        Se sua equipe tem interesse em participar da nossa mentoria,
+        agende uma <strong>Reunião de Alinhamento Inicial</strong> com a SESI MEGASNAKES.
+      
+        Esse será nosso primeiro contato para conhecer sua equipe,
+        entender seus objetivos, conversar sobre seus desafios e
+        alinhar as expectativas para a mentoria.
       </p>
 
-      <div class="materiais-grid">
+      <p>
+        Escolha um horário disponível no calendário abaixo.
+        Será um prazer conhecer vocês!
+      </p>
 
-        <div class="card-material animar">
-          <div class="icone-arquivo"><img src="fotos\logos-temp\snewton-ecosnakes.png" alt=""></div>
-          <h3>EcoSnakes</h3>
-          <p>Projeto desenvolvido com objetivo de promover a conscientização ambiental e democratizar o acesso à ciência e à tecnologia.</p>
-          <a href="ecosnakes.html" class="btn btn-verde">Saiba mais</a>
-        </div>
-
-        Adicione mais cards de materiais conforme necessário
-      </div>
     </div>
-  </section> -->
+
+    <div class="ninho-calendly-container animar">
+
+      <!-- SUBSTITUA PELO LINK REAL DO SEU EVENTO CALENDLY -->
+      <p> 
+        <div
+          class="calendly-inline-widget ninho-calendly"
+          data-url="https://calendly.com/megasnakesftc/ninhodecobras">
+        </div>
+      </p>
+
+      <p class="ninho-link-alternativo">
+        Se preferir, você também pode
+        <a
+          href="https://calendly.com/megasnakesftc/ninhodecobras"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          abrir o calendário em uma nova página
+        </a>.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== MURAL DE EQUIPES MENTORADAS ===== -->
+<section class="secao secao-fundo-bege" id="mural">
+  <div class="container">
+
+    <h2 class="titulo-secao animar">
+      Nosso mural de equipes
+    </h2>
+
+    <div class="divisor"></div>
+
+    <div class="ninho-mural-intro animar">
+      <p>
+        Cada equipe tem uma história, desafios e conquistas que
+        merecem ser compartilhados.
+      </p>
+
+      <p>
+        Este mural é um espaço para celebrar as equipes que fazem
+        parte do Ninho de Cobras, registrar suas experiências e
+        mostrar como a colaboração fortalece a comunidade FLL.
+      </p>
+    </div>
+
+    <div class="ninho-mural">
+
+      <!-- MODELO DE CARTÃO:
+           Substitua foto, nome e depoimento por conteúdo real,
+           autorizado pela equipe retratada. -->
+
+      <article class="ninho-depoimento animar">
+        <img
+          src="fotos/mural/equipe-01.jpg"
+          alt="Foto da primeira equipe mentorada"
+          class="ninho-depoimento-foto"
+          loading="lazy"
+        />
+
+        <div class="ninho-depoimento-conteudo">
+          <h3>Nome da equipe</h3>
+
+          <blockquote>
+            “[Insira aqui o depoimento real da equipe sobre
+            sua experiência com a mentoria.]”
+          </blockquote>
+
+          <p class="equipe-legenda">
+            Equipe mentorada · Temporada [ano]
+          </p>
+        </div>
+      </article>
+
+      <article class="ninho-depoimento animar">
+        <img
+          src="fotos/mural/equipe-02.jpg"
+          alt="Foto da segunda equipe mentorada"
+          class="ninho-depoimento-foto"
+          loading="lazy"
+        />
+
+        <div class="ninho-depoimento-conteudo">
+          <h3>Nome da equipe</h3>
+
+          <blockquote>
+            “[Insira aqui uma fala real sobre os aprendizados,
+            as trocas e os resultados da mentoria.]”
+          </blockquote>
+
+          <p class="equipe-legenda">
+            Equipe mentorada · Temporada [ano]
+          </p>
+        </div>
+      </article>
+
+      <article class="ninho-depoimento animar">
+        <img
+          src="fotos/mural/equipe-03.jpg"
+          alt="Foto da terceira equipe mentorada"
+          class="ninho-depoimento-foto"
+          loading="lazy"
+        />
+
+        <div class="ninho-depoimento-conteudo">
+          <h3>Nome da equipe</h3>
+
+          <blockquote>
+            “[Insira aqui o depoimento de outra equipe,
+            destacando sua experiência na jornada.]”
+          </blockquote>
+
+          <p class="equipe-legenda">
+            Equipe mentorada · Temporada [ano]
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== CHAMADA FINAL ===== -->
+<section class="secao">
+  <div class="container">
+
+    <h2 class="titulo-secao animar">
+      Crescemos juntos
+    </h2>
+
+    <div class="divisor"></div>
+
+    <div class="ninho-mural-intro animar">
+      <p>
+        A robótica nos ensina que grandes resultados nascem
+        da curiosidade, da colaboração e da vontade de aprender.
+      </p>
+
+      <p>
+        No Ninho de Cobras, queremos levar esse espírito ainda
+        mais longe, fortalecendo equipes e compartilhando
+        experiências com toda a comunidade FLL.
+      </p>
+
+      <a href="#agendamento" class="btn btn-verde">
+        Agende sua reunião inicial
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Widget oficial do Calendly: carregue apenas uma vez -->
+<script
+  src="https://assets.calendly.com/assets/external/widget.js"
+  async>
+</script>
+```
 
 
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
+
       <div class="footer-grid">
+
         <div class="footer-sobre">
+
           <div class="footer-logo-area">
             <img src="fotos/logo-01.png" alt="Logo da equipe FLL" />
             <img src="fotos/logo-02.png" alt="Logo da equipe FTC" />
             <span>SESI MEGASNAKES</span>
           </div>
+
           <p>
-            Equipe de robótica comprometida com educação STEM e com o desenvolvimento
-            de jovens talentos por meio da tecnologia e da competição saudável.
+            Equipe de robótica comprometida com a educação STEM,
+            a inovação e o desenvolvimento de jovens talentos
+            por meio da tecnologia e da competição saudável.
           </p>
+
         </div>
+
         <div class="footer-coluna">
           <h4>Páginas</h4>
+
           <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="geracoes.html">Gerações</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="projetos.html">Ninho de Cobras</a></li>
             <li><a href="patrocinadores.html">Apoiadores</a></li>
             <li><a href="robotica.html">Robótica</a></li>
             <li><a href="contato.html">Contato</a></li>
           </ul>
         </div>
+
         <div class="footer-coluna">
           <h4>Redes Sociais</h4>
+
           <ul>
-            <li><a href="https://www.instagram.com/megasnakes">Instagram - FLL</a></li>
-            <li><a href="https://www.instagram.com/megasnakes_ftc">Instagram - FTC</a></li>
-            <li><a href="https://www.youtube.com/@MegaSnakesFTC">YouTube</a></li>
-            <li><a href="https://www.linkedin.com/in/sesi-megasnakes-ftc/">LinkedIn</a></li>
-            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=megasnakes21@gmail.com" target="_blank">Email - FLL</a></li>
-            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=megasnakesftc@gmail.com" target="_blank">Email - FTC</a></li>
+            <li>
+              <a
+                href="https://www.instagram.com/megasnakes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram - FLL
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.instagram.com/megasnakes_ftc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram - FTC
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.youtube.com/@MegaSnakesFTC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                YouTube
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/in/sesi-megasnakes-ftc/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=megasnakes21@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Email - FLL
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=megasnakesftc@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Email - FTC
+              </a>
+            </li>
           </ul>
         </div>
+
       </div>
+
       <div class="footer-bottom">
-        <p>© <span id="ano-atual"></span> SESI MEGASNAKES. Todos os direitos reservados.</p>
+        <p>
+          © <span id="ano-atual"></span>
+          SESI MEGASNAKES. Todos os direitos reservados.
+        </p>
+
         <p>Feito com ❤ pelos membros da equipe.</p>
       </div>
+
     </div>
   </footer>
 
-  <script>
-    document.getElementById('ano-atual').textContent = new Date().getFullYear();
-  </script>
-  <script src="js/script.js"></script>
-</body>
 
+  <!-- ===== SCRIPTS ===== -->
+
+  <script>
+    document.getElementById('ano-atual').textContent =
+      new Date().getFullYear();
+  </script>
+
+  <script src="js/script.js"></script>
+
+  <!-- Widget oficial de incorporação do Calendly -->
+  <script
+    src="https://assets.calendly.com/assets/external/widget.js"
+    async
+  ></script>
+
+</body>
 </html>
+```
