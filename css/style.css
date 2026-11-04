@@ -1262,29 +1262,44 @@ footer {
   margin-bottom: 0;
 }
 
-/* --- MASTER (SESI): maior destaque --- */
+/* MASTER (SESI): logo em destaque, texto abaixo */
 .patro-master {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
-  align-items: center;
-  background-color: var(--branco);
-  border: 2px solid var(--verde);
-  border-radius: var(--raio);
-  padding: 40px 44px;
-  box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+
+    background-color: var(--branco);
+    border: 2px solid var(--verde);
+    border-radius: var(--raio);
+    padding: 40px 44px;
+    box-shadow: var(--sombra);
+}
+
+.patro-master .patro-logo {
+    width: 100%;
 }
 
 .patro-master .patro-logo img {
-  max-height: 190px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+}
+
+.patro-master .patro-texto {
+    width: 100%;
 }
 
 .patro-master .patro-texto h3 {
-  font-size: 1.7rem;
+    font-size: 1.7rem;
+    margin-bottom: 8px;
 }
 
 .patro-master .patro-texto p {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 /* --- GRANDES: um por linha, logo alternando de lado --- */
